@@ -11,24 +11,35 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn"
+      rel="stylesheet"
+    />
   </head>
   <body class="light-mode">
     <div class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#services">Education</a></li>
-        <li><a href="#contact">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#award">Award</a></li>
-        <li><a id="mode-toggle" class="toggle"></a></li>
-      </ul>
+      <div class="container">
+        <div class="navbar-header">
+          <a id="menu-toggle" class="toggle"><i class="fa fa-bars"></i></a>
+          <a id="mode-toggle" class="toggle"></a>
+        </div>
+        <div id="navbar-links" class="navbar-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Education</a></li>
+            <li><a href="#contact">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#award">Award</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div id="home" class="content">
       <h2>Welcome to the Home Section</h2>
-      <p>
+      <p class="phome">
         Meskipun saat ini Anda mungkin mengalami masa pengangguran, tetaplah
         percaya bahwa peluang yang cerah menanti di depan. Jangan biarkan rasa
         putus asa atau kekhawatiran menghalangi langkah Anda menuju kesuksesan.
@@ -64,6 +75,11 @@
         Universitas Sriwijaya <br />
         Bachelor Degree in Mathematics, 3.08/4.00
       </p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/id/5/5b/LogoUNSRI.jpg"
+        alt="logounsri"
+        width="200px"
+      />
     </div>
 
     <div id="contact" class="content">
@@ -144,12 +160,24 @@
 
     <div id="interests" class="content">
       <h2>Interests</h2>
-      <p>Technology</p>
+      <p>
+        Saya merasa sangat tertarik dan terpikat dengan dunia teknologi yang
+        begitu dinamis dan berkembang pesat. Segala inovasi, penemuan baru, dan
+        kemajuan yang terjadi dalam industri teknologi begitu menarik bagi saya.
+        Setiap kali saya mempelajari tentang perkembangan terbaru dalam bidang
+        teknologi, saya merasa terkesima oleh potensi dan dampaknya yang luas
+        dalam kehidupan sehari-hari, bisnis, komunikasi, hiburan, dan banyak
+        aspek lainnya.
+      </p>
+      <img src="assets/img/download.jpg" id="Ptech" />
     </div>
 
     <div id="award" class="content">
       <h2>Award</h2>
-      <p>awdawdasdawdasasd</p>
+      <p>
+        Juara 3 lomba akustik dalam acara bukber dan tasyarukan lustrum FMIPA
+      </p>
+      <img src="assets/img/akustik.jpg" alt="sertif" width="200px"/>
     </div>
 
     <script src="script.js"></script>

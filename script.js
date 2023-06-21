@@ -1,7 +1,12 @@
 window.addEventListener('DOMContentLoaded', function() {
   var navbarLinks = document.querySelectorAll('.navbar a');
   var modeToggle = document.getElementById('mode-toggle');
+  var menuToggle = document.getElementById('menu-toggle');
   var body = document.body;
+
+  menuToggle.addEventListener('click', function() {
+    navbarLinks.classList.toggle('active');
+  });
 
   navbarLinks.forEach(function(link) {
     link.addEventListener('click', smoothScroll);
@@ -25,3 +30,4 @@ window.addEventListener('DOMContentLoaded', function() {
     body.classList.toggle('dark-mode');
   }
 });
+

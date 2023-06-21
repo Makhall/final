@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 /* Styles for light mode */
@@ -21,32 +21,104 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  overflow: hidden;
 }
 
-.navbar ul {
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navbar-links ul{
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: flex;
 }
 
-.navbar li {
+.navbar-links li{
   flex: 1;
+}
+
+.navbar-links li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #000;
+}
+
+#navbar-links ul li a:hover {
+  color: #ff9900;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
 }
 
 .navbar a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links{
+    display: none;
+  }
+
+  .navbar-links.active{
+    display: flex;
+  }
+
+  .navbar.toggle{
+    display: block;
+  }
+
+  .navbar.toggle i{
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    /* float: auto; */
+    /* display: block; */
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .navbar li a {
+    padding: 10px;
+  }
+
+  .navbar li:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 .content {
   margin-top: 80px;
   height: 1000px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .toggle {
@@ -54,7 +126,7 @@ body {
 }
 
 .toggle::before {
-  content: '';
+  content: "";  
   position: absolute;
   top: 2px;
   right: 2px;
@@ -66,7 +138,7 @@ body {
 }
 
 .toggle::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   right: 4px;
@@ -86,9 +158,23 @@ body {
   right: calc(2% - 10px);
 }
 
-h2{
+h2 {
   margin: auto;
-  width: 50%;
-  /* border: 3px solid green; */
-  padding: 10px;
+  width: 100%;
+  font-family: "TwentiethCenturyW01-XBdCn", sans-serif;
+  text-align: center;
+}
+
+p {
+  margin-left: 15%;
+  margin-right: 15%;
+  word-spacing: 2px;
+}
+
+.phome{
+  font-size: large;
+}
+
+img{
+  margin-left: 287px;
 }
