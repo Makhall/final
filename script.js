@@ -1,33 +1,19 @@
-window.addEventListener('DOMContentLoaded', function() {
-  var navbarLinks = document.querySelectorAll('.navbar a');
-  var modeToggle = document.getElementById('mode-toggle');
-  var menuToggle = document.getElementById('menu-toggle');
-  var body = document.body;
+const menu = document.querySelector('.menu');
+const toggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-  menuToggle.addEventListener('click', function() {
-    navbarLinks.classList.toggle('active');
-  });
-
-  navbarLinks.forEach(function(link) {
-    link.addEventListener('click', smoothScroll);
-  });
-
-  modeToggle.addEventListener('click', toggleMode);
-
-  function smoothScroll(event) {
-    event.preventDefault();
-    var targetId = this.getAttribute('href');
-    var targetPosition = document.querySelector(targetId).offsetTop;
-
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }
-
-  function toggleMode() {
-    body.classList.toggle('light-mode');
-    body.classList.toggle('dark-mode');
-  }
+menu.addEventListener('click', () => {
+  menu.classList.toggle('show');
 });
 
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+});
+
+function showContactPopup() {
+  document.getElementById("contactPopup").style.display = "block";
+}
+
+function hideContactPopup() {
+  document.getElementById("contactPopup").style.display = "none";
+}

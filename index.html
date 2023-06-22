@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Portofolio</title>
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,27 +11,48 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn"
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="light-mode">
-    <div class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <a id="menu-toggle" class="toggle"><i class="fa fa-bars"></i></a>
-          <a id="mode-toggle" class="toggle"></a>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="logo" />
+          <a href="#">WELCOME</a>
         </div>
-        <div id="navbar-links" class="navbar-links">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#services">Education</a></li>
-            <li><a href="#contact">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#award">Award</a></li>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#services">Education</a></li>
+          <li><a href="#contact">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#award">Award</a></li>
+        </ul>
+        <div class="dark-mode-toggle">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle"></label>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hub">
+      <button onclick="showContactPopup()">CONTACT ME</button>
+      <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="hideContactPopup()">&times;</span>
+          <h2>Kontak yang Dapat Dihubungi</h2>
+          <ul id="contactList">
+            <li>No.Telp - 081234567890</li>
+            <li>E-mail - finalproject@gmail.com</li>
+            <a class="action-linkedin" href="https://www.linkedin.com/"
+              >LinkedIn</a
+            >
           </ul>
         </div>
       </div>
@@ -39,7 +60,7 @@
 
     <div id="home" class="content">
       <h2>Welcome to the Home Section</h2>
-      <p class="phome">
+      <p>
         Meskipun saat ini Anda mungkin mengalami masa pengangguran, tetaplah
         percaya bahwa peluang yang cerah menanti di depan. Jangan biarkan rasa
         putus asa atau kekhawatiran menghalangi langkah Anda menuju kesuksesan.
@@ -73,17 +94,18 @@
       <h2>Education</h2>
       <p>
         Universitas Sriwijaya <br />
-        Bachelor Degree in Mathematics, 3.08/4.00
+        Bachelor Degree in Mathematics
       </p>
       <img
         src="https://upload.wikimedia.org/wikipedia/id/5/5b/LogoUNSRI.jpg"
         alt="logounsri"
         width="200px"
+        class="contentlogo"
       />
     </div>
 
     <div id="contact" class="content">
-      <h2>Experience</h2>
+      <h2>Organizational Experience</h2>
       <ol>
         <li>Himpunan Mahasiswa Matematika - Anggota PPSDM</li>
         <ul>
@@ -140,22 +162,51 @@
 
     <div id="skills" class="content">
       <h2>Skills</h2>
-      <ol>
-        <li>Hard Skills</li>
-        <ul>
-          <li>Microsoft Office</li>
-          <li>Statistical Operation</li>
-          <li>Programming</li>
-        </ul>
-        <br />
-        <li>Soft Skills</li>
-        <ul>
-          <li>Critical thinking</li>
-          <li>Problem solving</li>
-          <li>Time management</li>
-          <li>Analytical thinking</li>
-        </ul>
-      </ol>
+      <div class="grid-container">
+        <div class="grid-item">
+          Microsoft Office <br />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Microsoft_Office_2013-2019_logo_and_wordmark.svg/1200px-Microsoft_Office_2013-2019_logo_and_wordmark.svg.png"
+            width="auto"
+            height="90px"
+          />
+        </div>
+        <div class="grid-item">
+          Statistical Operation
+          <br />
+          <img
+            src="https://img2.pngdownload.id/20180523/gss/kisspng-spss-modeler-ibm-computer-software-statistics-boards-5b05cf77cc75f0.3151321715271074478375.jpg"
+            width="auto"
+            height="90px"
+          />
+          <img
+            src="data:image/png;base64,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"
+            width="auto"
+            height="90px"
+          />
+          <img
+            src="https://i0.wp.com/ebizmark.id/wp-content/uploads/2023/01/Eviews.png?fit=1200%2C430&ssl=1"
+            width="auto"
+            height="70px"
+          />
+        </div>
+        <div class="grid-item">
+          Programming<br />
+          <img
+            src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-devextreme-multi-purpose-controls-html-javascript-3.png"
+            width="auto"
+            height="90px"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+            width="auto"
+            height="90px"
+          />
+        </div>
+        <div class="grid-item">Critical thinking</div>
+        <div class="grid-item">Problem solving</div>
+        <div class="grid-item">Time management</div>
+      </div>
     </div>
 
     <div id="interests" class="content">
@@ -169,7 +220,7 @@
         dalam kehidupan sehari-hari, bisnis, komunikasi, hiburan, dan banyak
         aspek lainnya.
       </p>
-      <img src="assets/img/download.jpg" id="Ptech" />
+      <img src="assets/img/download.jpg" id="Ptech" class="contentlogo" />
     </div>
 
     <div id="award" class="content">
@@ -177,7 +228,12 @@
       <p>
         Juara 3 lomba akustik dalam acara bukber dan tasyarukan lustrum FMIPA
       </p>
-      <img src="assets/img/akustik.jpg" alt="sertif" width="200px"/>
+      <img
+        src="assets/img/akustik.jpg"
+        alt="sertif"
+        width="200px"
+        class="contentlogo"
+      />
     </div>
 
     <script src="script.js"></script>
