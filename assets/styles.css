@@ -194,8 +194,9 @@ button {
   margin-bottom: 10px;
 }
 
-.action-linkedin {
+.action-linkedin{
   text-decoration: none;
+  margin-right: 5px;
 }
 
 #home {
